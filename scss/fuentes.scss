@@ -1,0 +1,67 @@
+$pDesktop:20px;
+$fontFamily: 'tahoma';
+
+
+main{
+	p{
+	font: {
+		size:$pDesktop;
+		family:$fontFamily;
+		weight:bold;
+		}
+	}
+
+} 
+
+$vista:desktop;
+
+main {
+	@if $vista == desktop {
+		@media only screen and (min-width:1024px){
+		h1{font-size:5em;}
+		h2{font-size:4em;}
+		}
+		}@else if $vista == mobile {
+			h1{font-size:20px;}
+			h2{font-size:18px;}
+			}@else{
+				h1{font-size: 50px;}
+				h2{font-size:40px;}
+			}	
+	}
+
+/*map-get*/
+
+$estilos: (
+  color: #101011,
+  centro: center,
+  upper: uppercase,
+  tFuente: 35px,
+  1rem : 1rem
+);
+
+div {
+  background-color: map-get($estilos, color);
+  text-align: map-get($estilos, centro);
+  padding: map-get($estilos, 1rem);
+  font-size:map-get($estilos, tFuente);
+  color: white;
+}
+
+$padding: (
+	TB:50px 0,
+	LR:0 20px
+	);
+
+@each $ubicacion,$espacio in $padding{
+	.padding#{$ubicacion}{
+		padding:$espacio;
+	}
+}
+h3{
+    background-color: map-get($estilos, color);
+    text-align: map-get($estilos, centro);
+    padding: map-get($estilos, 1rem);
+    font-size:map-get($estilos, tFuente);
+    color: white;
+}

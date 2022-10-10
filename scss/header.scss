@@ -1,0 +1,41 @@
+header {
+    font-style: inherit;
+    flex-wrap: wrap;
+    position: relative;
+    ul{
+        flex-wrap: wrap; 
+        display: inline;
+        position: relative;
+        font-size: 25px;
+      }
+.gridIndex{
+    display: grid;
+	grid-template-areas: 
+	"header"
+	"main"
+	"footer";
+	grid-template-columns: 100%;
+	grid-template-rows: auto auto auto;}
+}
+    
+header{grid-area: header;}
+main{grid-area: main;}
+footer{grid-area: footer;}
+
+li{
+    display: inline;
+    font-size: 25px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 100;
+    padding: 30px; 
+    position: relative;
+  }
+  
+  a{
+    text-decoration: none;
+    color: darkseagreen;
+  }
+  h3{
+    position: sticky;
+    top: 5px;
+  }
